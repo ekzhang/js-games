@@ -1,106 +1,106 @@
 .container {
-    text-align: center;
+  text-align: center;
 }
 
 h1 {
-    font-family: sans-serif;
+  font-family: sans-serif;
 }
 
 .game-container {
-    display: inline-block;
-    border: 2px solid;
-    border-color: #fff #7d7d7d #7d7d7d #fff;
-    padding: 5px;
-    background: lightgrey;
-    cursor: pointer;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  display: inline-block;
+  border: 2px solid;
+  border-color: #fff #7d7d7d #7d7d7d #fff;
+  padding: 5px;
+  background: lightgrey;
+  cursor: pointer;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .menu {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 5px;
-    border: 3px solid;
-    border-color: #7d7d7d #fff #fff #7d7d7d;
-    padding: 3px 6px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  border: 3px solid;
+  border-color: #7d7d7d #fff #fff #7d7d7d;
+  padding: 3px 6px;
 }
 
 .counter-container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .counter {
-    background: black;
-    color: red;
-    font-family: monospace;
-    font-size: 23px;
-    border: 1px solid;
-    border-color: #7d7d7d #fff #fff #7d7d7d;
+  background: black;
+  color: red;
+  font-family: monospace;
+  font-size: 23px;
+  border: 1px solid;
+  border-color: #7d7d7d #fff #fff #7d7d7d;
 }
 
 .reset-button-container {
-    display: inline-block;
-    border: 1px solid grey;
-    border-radius: 2px;
+  display: inline-block;
+  border: 1px solid grey;
+  border-radius: 2px;
 }
 
 .reset-button {
-    width: 30px;
-    height: 30px;
-    box-sizing: border-box;
-    border: 2px solid black;
-    border-color: #fff #7d7d7d #7d7d7d #fff;
-    background: lightgrey;
-    font-family: FontAwesome;
-    font-size: 20px;
-    line-height: 26px;
-    text-align: center;
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-color: #fff #7d7d7d #7d7d7d #fff;
+  background: lightgrey;
+  font-family: FontAwesome;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
 }
 
 .reset-button:active {
-    border-top: 1px solid #7d7d7d;
-    border-left: 1px solid #7d7d7d;
-    border-bottom: 0px;
-    border-right: 0px;
+  border-top: 1px solid #7d7d7d;
+  border-left: 1px solid #7d7d7d;
+  border-bottom: 0px;
+  border-right: 0px;
 }
 
 #grid {
-    border-spacing: 0;
-    border: 3px solid;
-    border-color: #7d7d7d #fff #fff #7d7d7d;
+  border-spacing: 0;
+  border: 3px solid;
+  border-color: #7d7d7d #fff #fff #7d7d7d;
 }
 
 .cell {
-    background: lightgrey;
-    font-family: Verdana;
-    font-weight: bold;
-    font-size: 13px;
-    text-align: center;
-    width: 21px;
-    height: 21px;
-    box-sizing: border-box;
-    border-top: 1px solid #7d7d7d;
-    border-left: 1px solid #7d7d7d;
+  background: lightgrey;
+  font-family: Verdana;
+  font-weight: bold;
+  font-size: 13px;
+  text-align: center;
+  width: 21px;
+  height: 21px;
+  box-sizing: border-box;
+  border-top: 1px solid #7d7d7d;
+  border-left: 1px solid #7d7d7d;
 }
 
 .cell.covered:not(:active):not(.mine) {
-    border: 2px solid black;
-    border-color: #fff #7d7d7d #7d7d7d #fff;
+  border: 2px solid black;
+  border-color: #fff #7d7d7d #7d7d7d #fff;
 }
 
 .cell.flag, .cell.mine {
-    font-family: FontAwesome;
-    font-weight: normal;
+  font-family: FontAwesome;
+  font-weight: normal;
 }
 
 .cell.flag {
-    color: red;
+  color: red;
 }
 
 .cell.mine:not(.covered) {
-    background: red;
+  background: red;
 }
