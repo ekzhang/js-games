@@ -8,6 +8,7 @@ body {
   border-spacing: 0;
   border: 2px solid blue;
   box-shadow: 0 0 10px navy;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
 .cell {

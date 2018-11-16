@@ -1,4 +1,5 @@
 /* Constants */
+const gridElement = d3.select('#grid');
 const rows = 20, cols = 10;
 const pieces = [
   {
@@ -72,8 +73,7 @@ function getData() {
 function update() {
   const data = getData();
 
-  const grid = d3.select('#grid');
-  let row = grid.selectAll('tr').data(data);
+  let row = gridElement.selectAll('tr').data(data);
   row.exit().remove();
   row = row.enter().append('tr').classed('row', true)
     .merge(row);
@@ -195,6 +195,26 @@ document.addEventListener('keydown', function(evt) {
   else if (code === 90)
     rotate(true);
   else if (code === 32) {
+    while (shift(+1, 0));
+    restartLoop();
+  }
+  update();
+});
+
+gridElement.on('click', function() {
+  d3.event.preventDefault();
+  let [x, y] = d3.mouse(gridElement.node());
+  x /= gridElement.node().offsetWidth;
+  y /= gridElement.node().offsetHeight;
+  if (y < 0.3)
+    rotate();
+  else if (y < 0.9) {
+    if (x < 0.5)
+      shift(0, -1);
+    else
+      shift(0, +1);
+  }
+  else {
     while (shift(+1, 0));
     restartLoop();
   }
